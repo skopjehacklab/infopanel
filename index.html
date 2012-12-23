@@ -8,54 +8,62 @@
 <link href="css/jquery.tweet.css" media="all" rel="stylesheet" type="text/css"/> 
 <style>
 #irc iframe {
-    border: 0;
+    border: 1px solid #8ADEE2;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
     width: 100%;
-    height: 384px;
+    height: 500px;
     overflow: hidden;
+}
+
+.dobredojde {
+    background-color: #8ADEE2;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    list-style: none outside none;
+    margin: 0;
+    overflow-y: hidden;
+    padding: 0.8em;
+    font-size: 150%;
+    text-align: center;
+}
+
+.temp {
+    font-weight: bold;
 }
 
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.tweet.js"></script>
-<script type='text/javascript'>
-    jQuery(function($){
-        $("#twitter").tweet({
-            username: "2cmk",
-            avatar_size: 24,
-            count: 7,
-            loading_text: "вчитувам...",
-            refresh_interval: 120,
-            query: "#хаклаб OR #skopjehacklab OR 2cmk"
-        });
-    });
-</script> 
-<script type='text/javascript'>
-     
-</script>
-
+<script src="js/infopanel.js"></script>
 </head>
 <body>
 <div class="container">
+    <br />
     <div class="row">
-        <div class="span6" id="sliki">Слики</div>
-        <div class="span6" id="stats">
+        <div class="span6" id="stats1">
             <ul class="tweet_list">
-            <li class="tweet_first tweet_odd">Отворен <span id="aktiven"></span></li>
-            <li class="tweet_even">Активни уреди: <span id="lanuredi"></span></li>
-            <li class="tweet_odd">HW соба: <span id="hwtemp"></span></li>
-            <li class="tweet_even">Lounge: <span id="loungetemp"></span></li>
-            <li class="tweet_odd">Random: <span id="randomtemp"></span></li>
-            <li class="tweet_odd">Надвор: <span id="outsidetemp"></span></li>
-            <li class="tweet_even">Интернет DL: <span id="internetdl"></span></li>
-            <li class="tweet_odd">Интернет UL: <span id="internetul"></span></li>
+            <li class="tweet_first tweet_odd temp" id="aktiven"></li>
+            <li class="tweet_even">Активни мрежни уреди во моментов: <span class="temp" id="lanuredi"></span></li>
+            <li class="tweet_odd">Интернет DL: <span id="internetdl"></span></li>
+            <li class="tweet_even">Интернет UL: <span id="internetul"></span></li>
+            </ul>
+       </div>
+        <div class="span6" id="stats2">
+            <ul class="tweet_list">
+            <li class="tweet_first tweet_odd">Температура во HW соба: <span class="temp" id="hardware_room"></span></li>
+            <li class="tweet_even">Во Lounge: <span class="temp" id="lounge_area"></span></li>
+            <li class="tweet_odd">Температурата во Random соба: <span class="temp" id="random_room"></span></li>
+            <li class="tweet_even">Надвор на тераса е: <span class="temp" id="outside"></span></li>
             </ul>
             <br />
         </div>
-    </div>
+    </div> 
     <div class="row">    
         <div class="span6" id="irc"><iframe src="https://irc.softver.org.mk/?auto-scroll=true#/lugola"></iframe></div>
         <div class="span6" id="twitter">Твитер</div>
+    </div>
+    <div class="row">
+        <div class="span12"><p class="dobredojde">Добредојде во КИКА, Хаклабот во Скопје. Повеќе на http://blog.spodeli.org</p></div>
     </div>
 </div>
 </body>
