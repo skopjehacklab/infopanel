@@ -5,7 +5,7 @@ jQuery(function($){
             count: 10,
             loading_text: "вчитувам...",
             refresh_interval: 120,
-            query: "#хаклаб OR #skopjehacklab OR 2cmk"
+            query: "#хаклаб OR #skopjehacklab OR @2cmk"
         });
     });
 
