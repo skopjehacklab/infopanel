@@ -37,7 +37,7 @@ function updateTemp() {
 
 function updateStatus() {
     var sega = new Date();
-    var url =  "https://api.cosm.com/v2/feeds/86779/datastreams/hacklab_status.json?duration=24hours";
+    var url =  "https://api.cosm.com/v2/feeds/86779/datastreams/hacklab_status.json?duration=5days";
     $.ajax({
         url: url,
         type: 'GET',
