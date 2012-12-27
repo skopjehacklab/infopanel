@@ -2,7 +2,7 @@ jQuery(function($){
         $("#twitter").tweet({
             username: "2cmk",
             avatar_size: 24,
-            count: 10,
+            count: 7,
             loading_text: "вчитувам...",
             refresh_interval: 120,
             query: "#хаклаб OR #skopjehacklab OR @2cmk"
@@ -13,8 +13,8 @@ function updateNetworkSpeeds() {
     $.getJSON("http://hacklab.ot.mk/ftp/vnstat/json/average.json?callback=?", function(data) {
         var TK = data['Telekabel'];
         var BL = data['Blizoo'];
-        $('#internetdl').text('Телекабел: ' + TK['txkbs'] + ' / Blizoo: ' + BL['txkbs']);
-        $('#internetul').text('Телекабел: ' + TK['rxkbs'] + ' / Blizoo: ' + BL['rxkbs']);
+        $('#internetdl').text('Телекабел: ' + TK['txkbs'] + 'KB/s ; Blizoo: ' + BL['txkbs'] + 'KB/s');
+        $('#internetul').text('Телекабел: ' + TK['rxkbs'] + 'KB/s ; Blizoo: ' + BL['rxkbs'] + 'KB/s');
     })
 }
 
@@ -46,7 +46,7 @@ function updateTemp() {
 
 function updateStatus() {
     var sega = new Date();
-    var url =  "https://api.cosm.com/v2/feeds/86779/datastreams/hacklab_status.json?duration=5days";
+    var url =  "https://api.cosm.com/v2/feeds/86779/datastreams/hacklab_status.json?duration=2days&interval=1800";
     $.ajax({
         url: url,
         type: 'GET',
