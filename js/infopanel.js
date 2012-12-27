@@ -9,6 +9,15 @@ jQuery(function($){
         });
     });
 
+function updateNetworkSpeeds() {
+    $.getJSON("http://hacklab.ot.mk/ftp/vnstat/json/average.json", function(data) {
+        var TK = data['Telekabel'];
+        var BL = data['Blizoo'];
+        $('#internetdl').text('Телекабел: ' + TK['txkbs'] + ' / Blizoo: ' + BL['txkbs']);
+        $('#internetul').text('Телекабел: ' + TK['rxkbs'] + ' / Blizoo: ' + BL['rxkbs']);
+    })
+}
+
 function updateLan() {
     var url="https://api.cosm.com/v2/feeds/64676/datastreams/lan_devices";
     $.ajax({
@@ -85,7 +94,8 @@ $(document).ready(function() {
     //Прв пат ажурирај
     updateLan();
     updateTemp();
-    updateStatus(); 
+    updateStatus();
+    updateNetworkSpeeds();
     
     //на 5-мин ажурирај го бројот на лан уреди
     window.setInterval("updateLan()",300000);
@@ -95,6 +105,9 @@ $(document).ready(function() {
 
     //на 10 минути ажурирај колку време е отворен
     window.setInterval("updateStatus()",600000);
+
+    // на пола минута ажурирај DL / UP брзину
+    window.setInterval("updateNetworkSpeeds()",30000);
 
 });
 
