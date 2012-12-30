@@ -123,7 +123,7 @@ $(document).ready(function() {
             $('#main').slides({
                 container: 'container',
                 preload: true,
-                play: 3000000,
+                play: 300000,
                 generatePagination: false,
             });
     });
