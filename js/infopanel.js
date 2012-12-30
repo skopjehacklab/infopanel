@@ -88,6 +88,12 @@ function secondsToString(seconds){
     return numhours + " часови " + numminutes + " минути ";
 }
 
+function updateVnstat() {
+    $("#telekabelimg").attr("src","http://hacklab.ot.mk/ftp/vnstat/wan-eth0-summary.png?" + new Date().getTime());
+    $("#blizooimg").attr("src","http://hacklab.ot.mk/ftp/vnstat/wan-eth2-summary.png?" + new Date().getTime());
+    
+}
+
 var key="vqElqXeb7Lu6ZwDElnKQ8XpGMG-SAKxxMHV3YWFoeHE4OD0g";
 $(document).ready(function() {
 
@@ -109,6 +115,19 @@ $(document).ready(function() {
     // на пола минута ажурирај DL / UP брзину
     window.setInterval("updateNetworkSpeeds()",30000);
 
-});
+    // на еден час ажурирај ги vnstat сликите
+    window.setInterval("updateVnstat()",3600000);
 
+    //слајдовите менувај ги на 5 минути
+    $(function(){
+            $('#main').slides({
+                container: 'container',
+                preload: true,
+                play: 3000000,
+                generatePagination: false,
+            });
+    });
+    
+
+});
 
