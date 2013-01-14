@@ -14,7 +14,6 @@ $(function() {
                 if (child >= children.length) counter = child = 0;
                 children.eq(child).fadeOut(1500, function() {
                     if (++child >= children.length) child = 0;
-                    console.log(child, children.length);
                     children.eq(child).fadeIn('slow');
                 });
             }
