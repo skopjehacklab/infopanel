@@ -11,7 +11,7 @@ $(function() {
                 data.init = children.hide().eq(0).show() && 1;
             if (change) { 
                 var child = Math.floor((counter - 1) / delay);
-                if (child >= children.length) counter = child = 0;
+                if (child >= children.length - 1) counter = 0;
                 children.eq(child).fadeOut(1500, function() {
                     if (++child >= children.length) child = 0;
                     children.eq(child).fadeIn('slow');
