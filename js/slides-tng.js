@@ -1,7 +1,7 @@
 $(function() {
     $('[data-slideshow]').each(function() {
-        var panel = $(this), child = 0, children = panel.children('div');
-        children.hide().eq(0).show();
+        var panel = $(this), child = 2, children = panel.children('div');
+        children.hide().eq(child).show();
         function change() {
             children.eq(child).fadeOut('slow', function() {
                 if (++child % children.length == 0) child = 0;
