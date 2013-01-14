@@ -118,18 +118,5 @@ $(document).ready(function() {
     // на еден час ажурирај ги vnstat сликите
     window.setInterval("updateVnstat()",3600000);
 
-    //слајдовите менувај ги на 5 минути
-    $(function(){
-            /*
-            $('#main').slides({
-                container: 'container',
-                preload: true,
-                play: 300000,
-                generatePagination: false,
-            });
-           */
-    });
-    
-
 });
 
