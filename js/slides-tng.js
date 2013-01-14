@@ -1,6 +1,6 @@
 $(function() {
     $('[data-slideshow]').each(function() {
-        var panel = $(this), child = 2, children = panel.children('div');
+        var panel = $(this), child = 2, children = panel.children();
         children.hide().eq(child).show();
         function change() {
             children.eq(child).fadeOut('slow', function() {
