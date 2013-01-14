@@ -38,11 +38,9 @@
 
 .container {
     width: 960px;
+    margin: 0.5em auto;
 }
 
-#main {
-    margin-top: 0,5em;
-}
 
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -53,10 +51,9 @@
 <script src="js/infopanel.js"></script>
 </head>
 <body>
-<div id="main">
 <div class="container" data-slideshow="30">
     <div>
-    <div class="row">
+    <div class="row-fluid">
         <div class="span6" id="stats1">
             <ul class="tweet_list">
             <li class="tweet_first tweet_odd temp" id="aktiven"></li>
@@ -75,11 +72,11 @@
             <br />
         </div>
     </div> 
-    <div class="row">    
+    <div class="row-fluid">    
         <div class="span6" id="irc"><iframe src="https://irc.softver.org.mk/?auto-scroll=true#/lugola"></iframe></div>
         <div class="span6" id="twitter">Твитер</div>
     </div>
-    <div class="row">
+    <div class="row-fluid">
         <div class="span12"><p class="dobredojde">Добредојде во КИКА, Хаклабот во Скопје. Повеќе на http://blog.spodeli.org</p></div>
     </div>
     </div>
@@ -94,7 +91,6 @@
 
     </div>
 
-</div>
 </div>
 </body>
 </html>
