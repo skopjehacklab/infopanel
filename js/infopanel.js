@@ -2,7 +2,7 @@ jQuery(function($){
         $("#twitter").tweet({
             username: "2cmk",
             avatar_size: 24,
-            count: 7,
+            count: 12,
             loading_text: "вчитувам...",
             refresh_interval: 120,
             query: "#хаклаб OR #skopjehacklab OR @2cmk"

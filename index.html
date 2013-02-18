@@ -17,7 +17,7 @@
     border: 1px solid #8ADEE2;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
     width: 100%;
-    height: 580px;
+    height: 700px;
     overflow: hidden;    
 }
 
@@ -55,33 +55,37 @@
     </div>
 
     <div>
-    <div class="row-fluid">
-        <div class="span6" id="stats1">
-            <ul class="tweet_list">
-            <li class="tweet_first tweet_odd temp" id="aktiven"></li>
-            <li class="tweet_even">Активни мрежни уреди во моментов: <span class="temp" id="lanuredi"></span></li>
-            <li class="tweet_odd">Интернет DL: <span class="temp" id="internetdl"></span></li>
-            <li class="tweet_even">Интернет UL: <span class="temp" id="internetul"></span></li>
-            </ul>
-       </div>
-        <div class="span6" id="stats2">
-            <ul class="tweet_list">
-            <li class="tweet_first tweet_odd">Температура во HW соба: <span class="temp" id="hardware_room"></span></li>
-            <li class="tweet_even">Во Lounge: <span class="temp" id="lounge_area"></span></li>
-            <li class="tweet_odd">Температурата во Random соба: <span class="temp" id="random_room"></span></li>
-            <li class="tweet_even">Надвор на тераса е: <span class="temp" id="outside"></span></li>
-            </ul>
-            <br />
-        </div>
-    </div> 
     <div class="row-fluid">    
-        <div class="span6" id="irc"><iframe src="https://irc.softver.org.mk/?auto-scroll=true#/lugola"></iframe></div>
-        <div class="span6" id="twitter">Твитер</div>
+        <div class="span12" id="irc"><iframe src="https://irc.softver.org.mk/?auto-scroll=true#/lugola"></iframe></div>
     </div>
+    </div>
+    <div>
+        <div class="row-fluid">
+            <div class="span12" id="twitter">Твитер</div>
+        </div>
     </div>
 
     <div id="vnstat">
-        <h3>Мрежен сообраќај кон интернет</h3>
+        <div class="row-fluid">
+            <div class="span6" id="stats1">
+                <ul class="tweet_list">
+                    <li class="tweet_first tweet_odd temp" id="aktiven"></li>
+                    <li class="tweet_even">Активни мрежни уреди во моментов: <span class="temp" id="lanuredi"></span></li>
+                    <li class="tweet_odd">Интернет DL: <span class="temp" id="internetdl"></span></li>
+                    <li class="tweet_even">Интернет UL: <span class="temp" id="internetul"></span></li>
+                </ul>
+            </div>
+            <div class="span6" id="stats2">
+                <ul class="tweet_list">
+                <li class="tweet_first tweet_odd">Температура во HW соба: <span class="temp" id="hardware_room"></span></li>
+                <li class="tweet_even">Во Lounge: <span class="temp" id="lounge_area"></span></li>
+                <li class="tweet_odd">Температурата во Random соба: <span class="temp" id="random_room"></span></li>
+                <li class="tweet_even">Надвор на тераса е: <span class="temp" id="outside"></span></li>
+                </ul>
+                <br />
+            </div>
+        </div>
+
         <img id="telekabelimg" width="50%" src="http://hacklab.ot.mk/ftp/vnstat/wan-eth0-summary.png" />
         <img id="blizooimg" width="50%" src="http://hacklab.ot.mk/ftp/vnstat/wan-eth2-summary.png" />
     </div>
