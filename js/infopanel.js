@@ -107,6 +107,9 @@ $(document).ready(function() {
     updateNetworkSpeeds();
     populateTumblr();
 
+    //На 30с. ажурирај го UL/DL
+    window.setInterval("updateNetworkSpeeds()",1000*30);
+
     //на 10 минути ажурирај колку време е отворен, температура
     window.setInterval("updateStatus()",1000*60*10);
     window.setInterval("updateTemp()",1000*60*10);

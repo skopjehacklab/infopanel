@@ -26,7 +26,7 @@ h2,h3,h4,h5 {
 }
 
 #tumblr { position:relative; width:250px; height:188px; }
-#tumblr img { position:absolute; left:0; top:0; width:250px; height:188px}
+#tumblr img { position:absolute; left:0; top:0; width:250px; height:188px; border: 1px solid lightblue;}
 
 .otvoren {
     background-color: #33cc33;
