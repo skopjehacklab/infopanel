@@ -1,6 +1,8 @@
 Инфопанел во Хаклаб
 ===================
 
+Live-preview on http://skopjehacklab.github.io/infopanel/
+
 Инфо панелот треба да има:
 - Real time irc log од #lugola
 - Twitter feed од #skopjehacklab и #хаклаб
