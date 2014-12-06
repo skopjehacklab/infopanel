@@ -58,7 +58,7 @@ function updateTemp() {
 }
 
 function updateNetworkSpeeds() {
-    $.getJSON("http://hacklab.ot.mk/ftp/vnstat/json/average.json?callback=?", function(data) {
+    $.getJSON("http://hacklab.ie.mk/ftp/vnstat/json/average.json?callback=?", function(data) {
         var TK = data['Telekabel'];
         var BL = data['Blizoo'];
         $('#tk_rxkbs').text(TK['rxkbs']);
